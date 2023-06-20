@@ -51,7 +51,7 @@ body {
     border-image-repeat: stretch;
     border-image-width: 100%;
     border-radius: 5px; /* Initial border-radius */
-    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Added transition for border-radius */
+    transition: background-color 0.3s ease, border-radius 0.5s ease; /* Added transition for border-radius */
     font-family: "Arial", sans-serif;
   }
   
@@ -68,6 +68,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: larger;
+  font-size: x-large;
   color: white;
 }

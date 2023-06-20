@@ -28,7 +28,7 @@ const spacing = (displayHeight - squareHeight * numSquares) / (numSquares + 1);
 
 for (let i = 0; i < numSquares; i++) {
   const y = spacing * (i + 1) + squareHeight * i;
-  const square = new SquareRenderer(475, y, i + 1);
+  const square = new SquareRenderer(475, y, Math.floor(Math.random() * 100) + 1);
   square
   square.render();
 }
@@ -36,7 +36,7 @@ for (let i = 0; i < numSquares; i++) {
 const spans = document.getElementsByClassName('numberSpan')
 document.getElementById('randomBut').addEventListener('click', () => {
   for (let i = 0; i < spans.length; i++) {
-    const randomNumber = Math.floor(Math.random() * 1000) + 1;
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
     spans[i].textContent = randomNumber;
   }
 })
