@@ -20,9 +20,14 @@ body {
 .square {
     width: 80px;
     height: 80px;
-    background-color: red;
+    background: linear-gradient(to right, #ee7752, #e73c7e);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: 5px;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
   }
+  
 
 #buttons {
     margin-top: 20px;
@@ -33,15 +38,36 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 5px;
-    background-color: #eee;
-    border: 1px solid #999;
+    background: linear-gradient(to right, #ee7752, #e73c7e);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
-    border-radius: 5px;
+    color: #fff;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #ee7752, #e73c7e);
+    border-image-repeat: stretch;
+    border-image-width: 100%;
+    border-radius: 5px; /* Initial border-radius */
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Added transition for border-radius */
+    font-family: "Arial", sans-serif;
   }
-
+  
 .button:hover {
-    background-color: #ccc;
+    background-color: #f95678;
+    border-radius: 25px; /* New border-radius on hover */
   }
+  
+  
+  
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: larger;
+  color: white;
+}

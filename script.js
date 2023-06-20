@@ -14,7 +14,7 @@ class SquareRenderer {
 
     const number = document.createElement('span');
     number.textContent = this.num;
-
+    number.classList.add('number')
     square.appendChild(number);
     display.appendChild(square);
   }
