@@ -14,7 +14,7 @@ class SquareRenderer {
 
     const number = document.createElement('span');
     number.textContent = this.num;
-    number.classList.add('number')
+    number.classList.add('numberSpan')
     square.appendChild(number);
     display.appendChild(square);
   }
@@ -29,5 +29,14 @@ const spacing = (displayHeight - squareHeight * numSquares) / (numSquares + 1);
 for (let i = 0; i < numSquares; i++) {
   const y = spacing * (i + 1) + squareHeight * i;
   const square = new SquareRenderer(475, y, i + 1);
+  square
   square.render();
 }
+
+const spans = document.getElementsByClassName('numberSpan')
+document.getElementById('randomBut').addEventListener('click', () => {
+  for (let i = 0; i < spans.length; i++) {
+    const randomNumber = Math.floor(Math.random() * 1000) + 1;
+    spans[i].textContent = randomNumber;
+  }
+})
